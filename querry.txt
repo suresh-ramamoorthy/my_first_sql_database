@@ -1,0 +1,36 @@
+CREATE TABLE tb_suresh_ramamoorthy(
+
+batting_order INT NOT NULL,
+jersey_number INT NOT NULL,
+players_name VARCHAR(100) NOT NULL,
+runs INT NOT NULL,
+ball  INT NOT NULL,
+fours INT NOT NULL,
+six INT NOT NULL,
+dot_balls INT NOT NULL,
+strike_rate DOUBLE NOT NULL,
+average DOUBLE NOT NULL,
+out_or_notout VARCHAR(100) NOT NULL,
+match_format VARCHAR(100) NOT NULL,
+PRIMARY KEY (batting_order)
+)
+
+INSERT INTO tb_suresh_ramamoorthy(jersey_number,players_name,runs,ball,fours,six,dot_balls,strike_rate,average,out_or_notout,match_format)
+VALUES(44,'sehwag',85,50,10,2,125.7,60.98,25,'out','ODI');
+
+TRUNCATE TABLE tb_suresh_ramamoorthy;
+
+INSERT INTO tb_suresh_ramamoorthy(jersey_number,players_name,runs,ball,fours,six,dot_balls,strike_rate,average,out_or_notout,match_format)
+VALUES(12,'yuvaraj',72,40,10,2,2,126.00,48.00,'out','ODI');
+
+
+TRUNCATE TABLE tb_suresh_ramamoorthy;
+
+INSERT INTO tb_suresh_ramamoorthy(jersey_number,players_name,runs,ball,fours,six,dot_balls,strike_rate,average,out_or_notout,match_format)
+VALUES(64,'nehra',8,10,1,0,4,90.5,15.00,'not out','ODI');
+
+
+UPDATE tb_suresh_ramamoorthy SET  out_or_notout = 'out' WHERE batting_order = 10;
+
+
+UPDATE tb_suresh_ramamoorthy SET match_format = 'test' WHERE batting_order = 11;
